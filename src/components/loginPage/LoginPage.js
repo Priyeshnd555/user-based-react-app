@@ -3,7 +3,7 @@ import "./LoginPage.css";
 
 import { useState } from "react";
 import { useEffect } from "react";
-import { TextField } from "@mui/material";
+import { Button, TextField } from "@mui/material";
 
 function LoginPage() {
 
@@ -57,9 +57,10 @@ function LoginPage() {
       />
       <br></br>
       <br></br>
-      <button type="submit" onClick={validateUser}>
-        sumbit
-      </button>
+      
+      <Button type="submit" variant="contained" color="success" onClick={validateUser}>
+        Submit
+      </Button>
     </div>
   );
 }
