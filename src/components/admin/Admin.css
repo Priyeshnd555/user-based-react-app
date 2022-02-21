@@ -1,0 +1,16 @@
+html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    transform: translateY(50%);
+  }
+  
+  .admin {
+   
+    border: 1px solid red;
+    padding: 20px;
+  
+  }
+  
+  
