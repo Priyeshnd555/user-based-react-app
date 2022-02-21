@@ -3,9 +3,10 @@ import "./LoginPage.css";
 
 import { useState } from "react";
 import { useEffect } from "react";
+import { TextField } from "@mui/material";
 
 function LoginPage() {
-  
+
   // storing user Data in state
 
   const [userData, setuserData] = useState({
@@ -28,10 +29,11 @@ function LoginPage() {
   return (
     <div className="App">
       <h5>welcome to our App</h5>
-
-      <input
+      <TextField
+        required
+        label="Required"
         type="text"
-        placeholder="name.."
+        // placeholder="name.."
         onChange={(e) => {
           setuserData({ ...userData, name: e.target.value });
         }}
@@ -40,9 +42,12 @@ function LoginPage() {
       <br></br>
       <br></br>
 
-      <input
+
+      <TextField
+        required
+        label="Required"
         type="password"
-        placeholder="pwd.."
+        // placeholder="pwd.."
         onChange={(e) =>
           setuserData({
             ...userData,
