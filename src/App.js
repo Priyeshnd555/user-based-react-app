@@ -1,62 +1,12 @@
-import logo from "./logo.svg";
-import "./App.css";
-
-import { useState } from "react";
-import { useEffect } from "react";
+import React from 'react'
+import LoginPage from './components/loginPage/LoginPage'
 
 function App() {
-  
-  // storing user Data in state
-
-  const [userData, setuserData] = useState({
-    name: "",
-    password: "",
-  });
-
-  // print state when validated
-
-  useEffect(() => {
-    console.log("userData from useEffect", userData);
-  }, [userData]);
-
-  //  onSumbit callback function
-
-  const validateUser = () => {
-    console.log("onSubmit", userData);
-  };
-
   return (
-    <div className="App">
-      <h5>welcome to our App</h5>
-
-      <input
-        type="text"
-        placeholder="name.."
-        onChange={(e) => {
-          setuserData({ ...userData, name: e.target.value });
-        }}
-      />
-
-      <br></br>
-      <br></br>
-
-      <input
-        type="password"
-        placeholder="pwd.."
-        onChange={(e) =>
-          setuserData({
-            ...userData,
-            password: e.target.value,
-          })
-        }
-      />
-      <br></br>
-      <br></br>
-      <button type="submit" onClick={validateUser}>
-        sumbit
-      </button>
+    <div>
+    <LoginPage/>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
